@@ -855,3 +855,11 @@ body.theme-dark .modal-close:focus-visible{outline-color:#fff;}
   width: 300px;
   height: auto;
 }
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-left: 10px;
+  vertical-align: middle;
+  filter: none;
+}
