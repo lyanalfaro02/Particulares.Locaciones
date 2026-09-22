@@ -1,3 +1,20 @@
+.logo,
+.hero-logo {
+  object-fit: contain;
+  filter: none;
+}
+
+/* Logo principal */
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+/* Logo grande */
+.hero-logo {
+  width: 300px;
+  height: auto;
+}
 :root{
   --black:#070707;--black2:#111;--white:#f7f7f5;--muted:#a5a5a5;--red:#e50914;--red2:#ff2b35;
   --line:#262626;--paper:#f1f1ed;--max:1240px;
