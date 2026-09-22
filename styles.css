@@ -855,21 +855,3 @@ body.theme-dark .modal-close:focus-visible{outline-color:#fff;}
 body.theme-dark .logo {
   filter: brightness(0) invert(1);
 }
-
-.logo,
-.hero-logo {
-  object-fit: contain;
-  filter: none;
-}
-
-/* Logo principal */
-.logo {
-  width: 180px;
-  height: auto;
-}
-
-/* Logo grande */
-.hero-logo {
-  width: 300px;
-  height: auto;
-}
