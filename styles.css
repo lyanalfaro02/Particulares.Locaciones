@@ -863,3 +863,40 @@ body.theme-dark .modal-close:focus-visible{outline-color:#fff;}
   vertical-align: middle;
   filter: none;
 }
+.hero-brand {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+  pointer-events: none;
+}
+
+.hero-brand-logo {
+  width: min(65%, 520px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+
+  /* Logo rojo */
+  filter: none;
+
+  /* Apariencia profesional */
+  opacity: 0;
+  transform: scale(0.94);
+
+  animation: heroLogoIn 1s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes heroLogoIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
