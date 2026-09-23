@@ -404,7 +404,7 @@ function enviarWhatsApp() {
     `${labels.budget}: ${value("budget")}`,
     `${labels.message}: ${value("message")}`
   ];
-  const numero="50686823430";
+  const numero="50661675217";
   const url=`https://wa.me/${numero}?text=${encodeURIComponent(lines.join("\n"))}`;
   const opened=window.open(url,"_blank","noopener,noreferrer");
   if(opened){
