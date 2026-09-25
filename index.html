@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registrá tu espacio como locación audiovisual en la red de deleFOCO: residencias, estudios, hoteles y otros lugares para producciones en Costa Rica y Centroamérica." />
+  <title>Locaciones para Particulares | deleFOCO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo-delefoco-icono.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="mode-b2c theme-dark" data-audience="b2c">
+  <header class="topbar">
+  
+    <a class="brand" href="#inicio" aria-label="deleFOCO">
+   <img
+  src="/ChatGPT Image Sep 24, 2026, 02_34_59 PM.png"
+  alt="deleFOCO"
+  class="logo"
+>
+</a>
+
+    <nav class="nav">
+      <a href="#servicios" data-i18n="navServices">Servicios</a>
+      <a href="#catalogo" data-i18n="navCatalog">Locaciones</a>
+      <a href="#proceso" data-i18n="navProcess">Proceso</a>
+      <a href="#contacto" data-i18n="navContact">Contacto</a>
+    </nav>
+
+    <div class="controls">
+      <div class="segmented" role="group" aria-label="Audiencia" data-i18n-aria="audienceLabel">
+        <button type="button" class="mode-btn" data-mode="b2b">Contratar Servicios</button>
+        <button type="button" class="mode-btn active" data-mode="b2c">Quiero ser parte</button>
+      </div>
+      <div class="mode-status" id="modeStatus" aria-live="polite">
+        <span class="mode-status-dot" aria-hidden="true"></span>
+        
+      </div>
+      <div class="segmented" role="group" aria-label="Idioma" data-i18n-aria="languageLabel">
+        <button type="button" class="lang-btn active" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="color-toggle" id="colorToggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro" aria-pressed="false"><span class="color-toggle-icon" aria-hidden="true">☾</span><span class="color-toggle-text" data-i18n="themeDark">Oscuro</span></button>
+      <a class="header-cta" href="#contacto" data-i18n="headerCta">Hablar con un asesor</a>
+    </div>
+  </header>
+
+  <div class="mode-transition" id="modeTransition" aria-hidden="true">
+    <div class="mode-transition-card">
+      <span class="mode-transition-kicker" data-i18n="audienceLabel">AUDIENCIA</span>
+      <div class="mode-transition-route">
+        <span id="transitionFrom">Empresas</span>
+        <span class="mode-transition-arrow" aria-hidden="true">→</span>
+        <strong id="transitionTo">Particulares</strong>
+      </div>
+      <div class="mode-transition-line"><span></span></div>
+      <p id="transitionText">Actualizando contenido para particulares…</p>
+    </div>
+  </div>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-flex">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">LOCACIONES · COSTA RICA</p>
+          <h1 id="heroTitle">¿Tenés un espacio con<br><span>potencial audiovisual?</span></h1>
+          <p id="heroText">Registrá tu propiedad, estudio, residencia o espacio y conectalo con producciones que buscan nuevas locaciones.</p>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#contacto" id="heroPrimary">Registrar mi locación <span>→</span></a>
+            <a class="btn btn-outline" href="#catalogo" id="heroSecondary">Ver catálogo</a>
+          </div>
+          <div class="hero-meta">
+            <span><b>01</b> <span data-i18n="heroMeta1">Scouting</span></span>
+            <span><b>02</b> <span data-i18n="heroMeta2">Permisos</span></span>
+            <span><b>03</b> <span data-i18n="heroMeta3">Coordinación</span></span>
+          </div>
+        </div>
+
+        <div class="hero-carousel" id="heroCarousel" aria-roledescription="carrusel" aria-label="Locaciones destacadas" data-i18n-aria="carouselLabel">
+          <span class="hero-carousel-tag" data-i18n="catalogEyebrow">CATÁLOGO</span>
+          <div class="hero-carousel-track">
+            <div class="hero-carousel-slide active" style="background-image:url('https://delefoco.com/Uploads/Productos/13450_22757-med.jpeg')"></div>
+            <div class="hero-carousel-slide" style="background-image:url('https://delefoco.com/Uploads/Productos/13451_22792-med.jpg')"></div>
+            <div class="hero-carousel-slide" style="background-image:url('https://delefoco.com/Uploads/Productos/13453_22803-med.jpeg')"></div>
+            <div class="hero-carousel-slide" style="background-image:url('https://delefoco.com/Uploads/Productos/13882_63300-med.jpeg')"></div>
+          </div>
+          <button type="button" class="hero-carousel-arrow prev" id="heroCarouselPrev" aria-label="Anterior" data-i18n-aria="carouselPrev">‹</button>
+          <button type="button" class="hero-carousel-arrow next" id="heroCarouselNext" aria-label="Siguiente" data-i18n-aria="carouselNext">›</button>
+          <div class="hero-carousel-dots" id="heroCarouselDots" role="tablist" aria-label="Seleccionar imagen" data-i18n-aria="carouselDots">
+            <button type="button" class="active" data-index="0" role="tab" aria-selected="true" aria-label="Imagen 1" data-image-n="1"></button>
+            <button type="button" data-index="1" role="tab" aria-selected="false" aria-label="Imagen 2" data-image-n="2"></button>
+            <button type="button" data-index="2" role="tab" aria-selected="false" aria-label="Imagen 3" data-image-n="3"></button>
+            <button type="button" data-index="3" role="tab" aria-selected="false" aria-label="Imagen 4" data-image-n="4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>17+</strong><span data-i18n="trustYears">años impulsando el audiovisual</span></div>
+      <div><strong>CR</strong><span data-i18n="trustCosta">Costa Rica y Centroamérica como destino de producción</span></div>
+      <div><strong>360°</strong><span data-i18n="trustSupport">acompañamiento de locación</span></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>SCOUTING</span><i>✦</i><span>COSTA RICA</span><i>✦</i><span>deleFOCO</span><i>✦</i><span>AUDIOVISUAL</span><i>✦</i><span>360°</span><i>✦</i><span data-i18n="marqueeLocations">LOCACIONES</span><i>✦</i></div><div class="marquee-group"><span>SCOUTING</span><i>✦</i><span>COSTA RICA</span><i>✦</i><span>deleFOCO</span><i>✦</i><span>AUDIOVISUAL</span><i>✦</i><span>360°</span><i>✦</i><span data-i18n="marqueeLocations">LOCACIONES</span><i>✦</i></div></div></div>
+
+    <section class="section" id="servicios">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark" data-i18n="servicesEyebrow">LO QUE HACEMOS</p>
+          <h2 id="servicesTitle">Tu espacio puede contar una historia.</h2>
+        </div>
+        <p id="servicesIntro">Te acompañamos en el registro y te explicamos cómo preparar tu locación para formar parte de la red.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <div class="icon">⌖</div>
+          <h3 id="service1Title">Scouting de locaciones</h3>
+          <p id="service1Text">Buscamos espacios que respondan al concepto visual y a las necesidades técnicas del proyecto.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <div class="icon">✓</div>
+          <h3 id="service2Title">Permisos de filmación</h3>
+          <p id="service2Text">Coordinamos autorizaciones necesarias ante entidades públicas y privadas.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <div class="icon">↔</div>
+          <h3 id="service3Title">Propietarios y autoridades</h3>
+          <p id="service3Text">Facilitamos acuerdos claros para el uso legal y eficiente de las locaciones.</p>
+        </article>
+        <article class="service-card">
+          <span class="service-number">04</span>
+          <div class="icon">◈</div>
+          <h3 id="service4Title">Asesoría técnica</h3>
+          <p id="service4Text">Evaluamos accesos, restricciones y viabilidad para reducir sorpresas durante el rodaje.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading light">
+        <div>
+          <p class="eyebrow" data-i18n="catalogEyebrow">CATÁLOGO</p>
+          <h2 id="catalogTitle">Espacios para contar historias.</h2>
+        </div>
+        <p id="catalogIntro">Explorá por tipo de locación y encontrá referencias para tu próximo proyecto.</p>
+      </div>
+
+      <div class="filters">
+        <button type="button" class="filter active" data-filter="all" data-i18n="filterAll">Todas</button>
+        <button type="button" class="filter" data-filter="residential" data-i18n="filterResidential">Residencial</button>
+        <button type="button" class="filter" data-filter="beach" data-i18n="filterBeaches">Playas</button>
+        <button type="button" class="filter" data-filter="mountain" data-i18n="filterMountains">Montañas</button>
+        <button type="button" class="filter" data-filter="hotel" data-i18n="filterHotels">Hoteles</button>
+      </div>
+
+      <div class="location-grid" id="locationGrid">
+
+  <article class="location-card" data-type="residential">
+    <div class="location-image img-1">
+      <span data-i18n="filterResidential">Residencial</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location1Title">Casa antigua de madera en San José</h3>
+      <p>San José · Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13450" target="_blank" rel="noopener" data-location="Casa antigua de madera en San José" data-i18n="location1Cta">Ver locación →</a>
+    </div>
+  </article>
+
+  <article class="location-card" data-type="beach">
+    <div class="location-image img-2">
+      <span data-i18n="filterBeaches">Playas</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location2Title">Playas de Guanacaste</h3>
+      <p>Guanacaste · Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13451" target="_blank" rel="noopener" data-location="Playas de Guanacaste" data-i18n="location2Cta">Ver locación →</a>
+    </div>
+  </article>
+
+  <article class="location-card" data-type="mountain">
+    <div class="location-image img-3">
+      <span data-i18n="filterMountains">Montañas</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location3Title">Caño Negro Wetlands</h3>
+      <p>Caño Negro · Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13453" target="_blank" rel="noopener" data-location="Caño Negro Wetlands" data-i18n="location3Cta">Ver locación →</a>
+    </div>
+  </article>
+
+  <article class="location-card" data-type="residential">
+    <div class="location-image img-4">
+      <span data-i18n="filterResidential">Residencial</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location4Title">Casa moderna en San José</h3>
+      <p>San José · Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13882" target="_blank" rel="noopener" data-location="Casa moderna en San José" data-i18n="location4Cta">Ver locación →</a>
+    </div>
+  </article>
+
+  <article class="location-card" data-type="residential">
+    <div class="location-image img-5">
+      <span data-i18n="filterResidential">Residencial</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location5Title">Casa Siglo XIX</h3>
+      <p>Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13461" target="_blank" rel="noopener" data-location="Casa Siglo XIX" data-i18n="location5Cta">Ver locación →</a>
+    </div>
+  </article>
+
+  <article class="location-card" data-type="residential">
+    <div class="location-image img-6">
+      <span data-i18n="filterResidential">Residencial</span>
+    </div>
+    <div class="location-body">
+      <h3 data-i18n="location6Title">Casa en Lourdes</h3>
+      <p>Lourdes · Costa Rica</p>
+      <a class="text-btn" href="https://delefoco.com/?action=p&amp;id=13460" target="_blank" rel="noopener" data-location="Casa en Lourdes" data-i18n="location6Cta">Ver locación →</a>
+    </div>
+  </article>
+
+</div>
+    </section>
+
+    <section class="process section" id="proceso">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark" data-i18n="processEyebrow">CÓMO FUNCIONA</p>
+          <h2 id="processTitle">De la idea al rodaje.</h2>
+        </div>
+        <p id="processIntro">Un proceso claro para llegar al espacio adecuado.</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><span>01</span><h3 id="step1Title">Brief</h3><p id="step1Text">Nos contás qué necesitás: tipo de producción, fechas, región y características.</p></div>
+        <div class="step"><span>02</span><h3 id="step2Title">Scouting</h3><p id="step2Text">Filtramos y proponemos espacios según el concepto y la viabilidad.</p></div>
+        <div class="step"><span>03</span><h3 id="step3Title">Gestión</h3><p id="step3Text">Coordinamos propietarios, permisos y condiciones de uso.</p></div>
+        <div class="step"><span>04</span><h3 id="step4Title">Rodaje</h3><p id="step4Text">Llegás a una locación preparada para trabajar.</p></div>
+      </div>
+    </section>
+
+    <section class="section categories" id="comunidad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark" data-i18n="catsEyebrow">COMUNIDAD AUDIOVISUAL</p>
+          <h2 data-i18n="catsTitle">Explorá nuestras diferentes categorias.</h2>
+        </div>
+        
+
+      
+    </section>
+
+    <section class="audience-section" id="audiencia">
+      <div class="audience-copy">
+        <p class="eyebrow" data-i18n="audienceEyebrow">DELEFOCO</p>
+        <h2 id="audienceTitle">Convertí tu espacio en una oportunidad.</h2>
+        <p id="audienceText">Compartí información, fotos y disponibilidad para que podamos valorar tu locación.</p>
+        <a class="btn btn-white" href="#contacto" id="audienceCta">Quiero registrar mi espacio →</a>
+      </div>
+      <div class="hero-brand audience-logo">
+        <div class="audience-logo-card">
+          <a class="audience-logo-link" href="https://delefoco.com/locaciones/" target="_blank" rel="noopener" aria-label="Ver locaciones en deleFOCO" title="Ver locaciones en deleFOCO" data-i18n-aria="audienceLogoLabel" data-i18n-title="audienceLogoLabel">
+            <img src="logo-delefoco-icono.png" alt="deleFOCO" width="933" height="1169" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-intro">
+        <p class="eyebrow dark" data-i18n="contactEyebrow">HABLEMOS</p>
+        <h2 id="contactTitle">Registrá tu locación.</h2>
+        <p id="contactText">Dejanos tus datos y una descripción del espacio. Te contactaremos con los siguientes pasos.</p>
+        <div class="contact-info">
+          <div><span>WhatsApp</span><strong>+506 8682-3430</strong></div>
+          <div><span>Email</span><strong>comunidad@delefoco.com</strong></div>
+        </div>
+      </div>
+
+      <form class="lead-form" id="leadForm">
+        <label><span id="labelName">Nombre</span><input name="name" required placeholder="Tu nombre" data-i18n-placeholder="placeholderName" /></label>
+        <label><span id="labelEmail">Correo</span><input type="email" name="email" required placeholder="tu@email.com" data-i18n-placeholder="placeholderEmail" /></label>
+        <label><span id="labelProject">Tipo de producción</span>
+          <select name="project" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="advertising">Publicidad</option><option value="filmtv">Cine / TV</option><option value="photography">Fotografía</option><option value="corporate">Video corporativo</option><option value="other">Otro</option>
+          </select>
+        </label>
+        <label><span id="labelLocation">Locación buscada</span><input name="location" placeholder="Ej. casa, playa, urbano..." data-i18n-placeholder="placeholderLocation" /></label>
+        <label><span id="labelDate">Fecha</span><input type="date" name="date" /></label>
+        <label><span id="labelBudget">Presupuesto aproximado</span><input name="budget" placeholder="Opcional" data-i18n-placeholder="placeholderBudget" /></label>
+        <label class="full"><span id="labelMessage">Brief</span><textarea name="message" rows="5" placeholder="Contanos sobre el proyecto..." data-i18n-placeholder="placeholderMessage"></textarea></label>
+        <button class="btn btn-red full" type="button" id="whatsappSubmit">
+    Registrar locación <span>→</span>
+</button>
+        <p class="form-status full" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+ <footer class="footer-profesional">
+
+  <!-- ===== BANDA ROJA: REDES SOCIALES ===== -->
+  <div class="footer-social">
+    <div class="footer-social-inner">
+
+      <h3 data-i18n="footerSocialTitle">Conecte con la comunidad audiovisual</h3>
+
+      <div class="social-list">
+
+        <!-- Direcciones de las redes sociales -->
+        <a class="social-item" href="https://www.facebook.com/delefoco" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg>
+          </span>
+          <span class="social-text"><strong data-i18n="footerFollow">Síganos</strong><span data-i18n="footerOnFacebook">en Facebook</span></span>
+        </a>
+
+        <a class="social-item" href="https://www.instagram.com/delefoco/" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="social-text"><strong data-i18n="footerFollow">Síganos</strong><span data-i18n="footerOnInstagram">en Instagram</span></span>
+        </a>
+
+        <a class="social-item" href="https://twitter.com/delefoco" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </span>
+          <span class="social-text"><strong data-i18n="footerFollow">Síganos</strong><span data-i18n="footerOnTwitter">en Twitter</span></span>
+        </a>
+
+        <a class="social-item" href="https://api.whatsapp.com/send/?phone=50686823430&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <span class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 21l1.65-4.9A8.5 8.5 0 1 1 8 19.4L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .7c-1-.4-2-1.4-2.4-2.4l.7-1-1-2L9 8.5z" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="social-text"><strong data-i18n="footerWriteUs">Escríbanos</strong><span data-i18n="footerOnWhatsApp">en WhatsApp</span></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== CUERPO DEL FOOTER ===== -->
+  <div class="footer-main">
+
+    <div class="footer-wrap">
+
+      <!-- LOGO + DESCRIPCIÓN -->
+      <div class="footer-brand-area">
+        <a href="#inicio" class="footer-logo-link" aria-label="deleFOCO">
+          <img src="/ChatGPT Image Sep 24, 2026, 02_34_59 PM.png" alt="deleFOCO" class="logo footer-logo-img">
+        </a>
+        <p id="footerText">Comunidad audiovisual · San José, Costa Rica</p>
+      </div>
+
+      <!-- UBICACIÓN -->
+      <div class="footer-column">
+        <h4 data-i18n="footerLocation">UBICACIÓN</h4>
+        <p>San José,<br>Costa Rica</p>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="footer-column">
+        <h4 data-i18n="footerContact">CONTACTO</h4>
+        <a href="tel:+50622244696">+506 2224-4696</a>
+        <a href="https://wa.me/50686823430" target="_blank" rel="noopener">WhatsApp +506 8682-3430</a>
+        <a href="mailto:comunidad@delefoco.com">comunidad@delefoco.com</a>
+      </div>
+
+      <!-- IMPORTANTE (dos columnas de enlaces) -->
+      <div class="footer-column footer-important">
+        <h4 data-i18n="footerImportant">IMPORTANTE</h4>
+        <div class="footer-links footer-links-2col">
+          <a href="https://delefoco.com/nosotros" target="_blank" rel="noopener" data-i18n="footerUs">Nosotros</a>
+          <a href="https://delefoco.com/revista" target="_blank" rel="noopener" data-i18n="footerMagazine">Revista</a>
+          <a href="https://delefoco.com/escuela" target="_blank" rel="noopener" data-i18n="footerSchool">Escuela</a>
+          <a href="https://delefoco.com/casting" target="_blank" rel="noopener" data-i18n="footerCasting">Casting</a>
+          <a href="https://delefoco.com/comunidad" target="_blank" rel="noopener" data-i18n="footerCommunityLink">Comunidad</a>
+          <a href="#servicios" data-i18n="footerServices">Servicios</a>
+          <a href="https://delefoco.com/membresias" target="_blank" rel="noopener" data-i18n="footerMemberships">Membresías</a>
+          <a href="#contacto" data-i18n="navContact">Contacto</a>
+          <a href="https://delefoco.com/?action=p&amp;id=13913" target="_blank" rel="noopener" data-i18n="footerCRM">CRM para Audiovisuales</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BARRA FINAL -->
+    <div class="footer-bottom">
+      <span data-i18n="footerBottom">© 2026 deleFOCO · Comunidad Audiovisual</span>
+      <div class="footer-bottom-links">
+        <a href="https://delefoco.com/" target="_blank" rel="noopener">delefoco.com</a>
+        <a href="#inicio" aria-label="Volver arriba" data-i18n-aria="backToTop">↑</a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  <div class="modal" id="locationModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Cerrar" data-i18n-aria="chatClose">×</button>
+      <p class="eyebrow dark" data-i18n="modalEyebrow">LOCACIÓN</p>
+      <h2 id="modalTitle">Locación</h2>
+      <p id="modalText"></p>
+      <a class="btn btn-red" href="#contacto" id="modalCta">Solicitar esta locación →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
